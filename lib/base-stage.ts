@@ -5,6 +5,6 @@ export class BaseStage extends cdk.Stage {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StageProps) {
         super(scope, id, props);
 
-        const baseStack = new BaseStack(this, 'BaseStack')
+        const baseStack = new BaseStack(this, 'BaseStack');
     }
 }

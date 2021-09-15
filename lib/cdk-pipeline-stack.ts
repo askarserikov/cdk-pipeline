@@ -1,5 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from '@aws-cdk/pipelines';
+import { BaseStage } from './base-stage';
 
 
 export class CdkPipelineStack extends cdk.Stack {
@@ -13,6 +14,8 @@ export class CdkPipelineStack extends cdk.Stack {
         commands: ['npm ci', 'npm run build', 'npx cdk synth']
       })
     });
+
+    pipeline.addStage(new BaseStage(this, 'BaseStage'));
 
   }
 }
