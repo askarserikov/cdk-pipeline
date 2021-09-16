@@ -26,7 +26,7 @@ export class AppStack extends cdk.Stack {
           image: ecs.EcrImage.fromEcrRepository(repository),
           taskDefinition: fargateTaskDefinition,
           environment: {
-              'CUSTOM_ENVVAR': 'Hey from Cross-Account CDK Pipeline! v2!!!'
+              'CUSTOM_ENVVAR': 'Hey from Cross-Account CDK Pipeline! v2!'
           }
       });
 
