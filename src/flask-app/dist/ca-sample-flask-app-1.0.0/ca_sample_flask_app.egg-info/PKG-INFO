@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ca-sample-flask-app
+Version: 1.0.0
+Summary: A sample Flask web app
+Home-page: https://github.com/askarserikov/flask-app
+Author: Askar
+Author-email: askar.k.serikov@gmail.com
+License: UNKNOWN
+Description: # flask-app
+        This is a sample Flask application to be used as an artifact for an immutable infrastructure stack deployment. 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
