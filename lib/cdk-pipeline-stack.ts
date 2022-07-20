@@ -29,17 +29,17 @@ export class CdkPipelineStack extends Stack {
       bg: "#FF0000"
     });
 
-    const altStage = new BaseStage(this, 'BaseStageAlt', {
-      env: {
-        account: '303919846363',
-        region: 'eu-west-1'
-      },
-      customGreeting: 'Hi from Alt account',
-      bg: '#FF9900'
-    });
+    // const altStage = new BaseStage(this, 'BaseStageAlt', {
+    //   env: {
+    //     account: '303919846363',
+    //     region: 'eu-west-1'
+    //   },
+    //   customGreeting: 'Hi from Alt account',
+    //   bg: '#FF9900'
+    // });
 
     wave.addStage(mainStage);
-    wave.addStage(altStage);
+    // wave.addStage(altStage);
 
     wave.addPost(new ShellStep("albTest", {
       envFromCfnOutputs: {albAddress: mainStage.albAddress},
