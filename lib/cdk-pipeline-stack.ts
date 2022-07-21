@@ -2,7 +2,6 @@ import { Stack, StackProps, SecretValue } from 'aws-cdk-lib';
 import { CodePipeline, CodePipelineSource, ShellStep, Wave } from 'aws-cdk-lib/pipelines';
 import { Construct } from 'constructs';
 import { BaseStage } from './base-stage';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class CdkPipelineStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -45,12 +44,5 @@ export class CdkPipelineStack extends Stack {
       envFromCfnOutputs: {albAddress: mainStage.albAddress},
       commands: ['curl -s -o /dev/null -w "%{http_code}" $albAddress']
     }));
-
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'CdkPipelineQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
   }
 }

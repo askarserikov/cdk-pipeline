@@ -22,6 +22,6 @@ export class BaseStage extends Stage {
 
         this.albAddress = new CfnOutput(appStack, 'albAddress', {
             value: `http://${appStack.alb.loadBalancerDnsName}/`
-        })
+        });
     }
 }
